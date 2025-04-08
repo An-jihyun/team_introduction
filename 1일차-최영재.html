@@ -96,10 +96,10 @@
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
-            
+
         }
-        
-        #image_section2{
+
+        #image_section2 {
             margin-top: 10px;
         }
 
@@ -133,12 +133,21 @@
             margin-top: 10px;
             gap: 10px;
         }
-
     </style>
     <script>
         function new_page(elem) {
             window.open(elem.dataset.url);
         }
+
+        function change_img (elem) {
+            let mainImg = $('#main_dog_img');
+            let subImg = $(this);
+
+            let temp = mainImg.attr('src');  // 메인이미지 src 저장
+            mainImg.attr('src', subImg.attr('src'));  // 메인 -> 서브 src
+            subImg.attr('src', temp);  // 서브 -> 메인 src
+        };
+        
     </script>
 </head>
 
@@ -188,8 +197,8 @@
                             onclick="new_page(this)" />
                         <img data-url="https://velog.io/@teopteop/posts" src="img/vel.png" width="50px"
                             onclick="new_page(this)" />
-                        <button class="btn btn-primary mt-3" onclick="location.href='index.html'" 
-                        style="height: 50px; background-color: #4682B4; border-color: #4682B4;">뒤로갈래?</button>
+                        <button class="btn btn-primary mt-3" onclick="location.href='index.html'"
+                            style="height: 50px; background-color: #4682B4; border-color: #4682B4;">뒤로갈래?</button>
                     </div>
                 </div>
             </div>
@@ -202,17 +211,17 @@
         </div>
         <div id="image_section2">
             <div id="main_dog">
-                <img src="img/강1.jpg" width="300px" />
+                <img id="main_dog_img" src="img/강1.jpg" width="300px" />
             </div>
             <div id="sub_dog">
                 <span>
-                    <img src="img/강2.jpg" height="50px" width="50px" />
+                    <img onclick="changeImg(this)" src="img/강2.jpg" height="50px" width="50px" />
                 </span>
                 <span>
-                    <img src="img/강3.jpg" height="50px" width="50px" />
+                    <img onclick="changeImg(this)" src="img/강3.jpg" height="50px" width="50px" />
                 </span>
                 <span>
-                    <img src="img/강4.jpg" height="50px" width="50px" />
+                    <img onclick="changeImg(this)" src="img/강4.jpg" height="50px" width="50px" />
                 </span>
             </div>
             </span>
