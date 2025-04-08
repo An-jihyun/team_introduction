@@ -1,3 +1,4 @@
+/* 기본 태그 */
 button {
   background-color: #4caf50;
   border: none;
@@ -12,11 +13,18 @@ button {
 }
 
 body {
-  background: #e6ffe6;
+  /* 배경 */
+  background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8JUVDJTg4JUIyJTIwJUVCJUIwJUIwJUVBJUIyJUJEJUVEJTk5JTk0JUVCJUE5JUI0fGVufDB8fDB8fHww');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* 폰트 */
   font-family: 'Gaegu', sans-serif;
   font-weight: 900;
   font-size: x-large;
-  color: green;
+  color: rgba(20, 180, 80, 1);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
 button:hover {
@@ -33,28 +41,35 @@ li {
   list-style: none;
   margin-bottom: 10px;
 }
-.container > div {
-  border-bottom: 1px solid green;
+
+ul {
+  padding: 0;
 }
+
+h2 {
+  margin: 10px 0 0 0;
+}
+
+/* 컨텐츠 레이아웃 */
 #basic-info {
-  height: 200px;
+  height: 250px;
   margin-top: 50px;
 }
+
 #mbti {
-  height: 300px;
-  background: #222;
+  height: 260px;
 }
+
 #learning-style {
-  height: 300px;
-  background: #333;
+  height: 280px;
 }
+
 #tmi {
-  height: 300px;
-  background: #444;
+  height: 240px;
 }
-#resolution {
-  height: 300px;
-  background: #555;
+
+#hope {
+  height: 150px;
 }
 
 #home-button {
@@ -64,35 +79,49 @@ li {
   height: 60px;
 }
 
+/* 컨테이너 */
 .container {
   margin: 0 auto;
   width: 70%;
   height: inherit;
-  background: #fff;
   display: flex;
+  background-color: rgba(10, 15, 10, 0.3);
 }
 
 #button-container {
   position: relative;
+  background: none;
 }
 
+/* 디자인용 클래스 */
 .vc {
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
-.w-30, .w-70 {
+.w-30,
+.w-70 {
   box-sizing: border-box;
   height: inherit;
 }
 
 .w-30 {
   width: 30%;
-  background: pink;
   padding: 0 5px;
 }
 
 .w-70 {
   width: 70%;
-  background: yellow;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mr-20 {
+  margin-right: 20px;
 }
