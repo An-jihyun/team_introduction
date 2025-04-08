@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>불4조</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+
+        body {
+            background-image: url('img/bgi.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            display: flex;
+            flex-direction: column;
+
+            font-family: "Song Myung", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            background-color: #4682B4;
+            color: #4682B4;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #main {
+            box-shadow: 0px 4px 15px black;
+            border: 10px solid #4682B4;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-radius: 15px;
+            padding: 25px;
+            background-color: #D6F6FF;
+        }
+
+
+        #main2 {
+            margin-top: 30px;
+            box-shadow: 0px 4px 15px black;
+            border: 10px solid #4682B4;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-radius: 15px;
+            padding: 25px;
+            background-color: #D6F6FF;
+        }
+
+        #main_section {
+            display: flex;
+            margin: 10px 0px 0px 10px;
+        }
+
+        #title_box,
+        #introduce_box {
+            color: #D6F6FF;
+            text-align: left;
+            border-radius: 10px;
+            padding: 5px 5px 5px 20px;
+            background-color: #4682B4;
+            width: 100%;
+        }
+
+        #introduce_box2 {
+            margin-top: 10px;
+            flex: 1;
+        }
+
+        #image_section>image {
+            display: flex;
+            border-radius: 10px;
+            margin: 5px;
+            height: 150px;
+            width: 150px;
+        }
+
+        #text_line {
+
+            margin-left: 20px;
+        }
+
+        #text_line>ol>li:hover {
+            font-weight: bold;
+        }
+
+        #sub_int {
+            gap: 10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            
+        }
+        
+        #image_section2{
+            margin-top: 10px;
+        }
+
+        img {
+            box-shadow: 0px 4px 8px black;
+            border-radius: 10%;
+        }
+
+        img:hover {
+            filter: brightness(70%);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        li:hover {
+            filter: brightness(70%);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        #sub_dog {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 10px;
+        }
+
+        #sub_pic {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 10px;
+        }
+
+    </style>
+    <script>
+        function new_page(elem) {
+            window.open(elem.dataset.url);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="snowflake"></div>
+    <div id="main">
+        <div id="title_box">
+            🧊+🔥안녕하실까요?
+        </div>
+        <div id="main_section">
+            <div id="image_section">
+                <div id="main_pic">
+                    <img src="img/blue.png" width="300px" />
+                </div>
+                <div id="sub_pic">
+                    <span>
+                        <img src="img/blue.png" width="50px" />
+                    </span>
+                    <span>
+                        <img src="img/blue.png" width="50px" />
+                    </span>
+                    <span>
+                        <img src="img/blue.png" width="50px" />
+                    </span>
+                    <span>
+                        <img src="img/blue.png" width="50px" />
+                    </span>
+                </div>
+                </span>
+            </div>
+
+            <div id="text_line">
+                <div id="introduce_box">
+                    최영재 <u>만</u> 29세
+                </div>
+                <div id="introduce_box2">
+                    <ol style="font-size: 20px;">
+                        <li>불4조에서 <strong>파랑불사조</strong> 역할을 맡았습니다.</li>
+                        <li>객관적으로 살펴본 자신의 장점</li>
+                        <li>자신의 스타일 협업 스타일 소개</li>
+                        <li>우리 팀만의 특징과 추구하는 궁극적인 목표</li>
+                        <li>민폐 끼치지 않도록 열심히 하겠습니다.</li>
+                    </ol>
+
+                    <div id="sub_int">
+                        <img data-url="https://github.com/teopteop?tab=repositories" src="img/git.png" width="50px"
+                            onclick="new_page(this)" />
+                        <img data-url="https://velog.io/@teopteop/posts" src="img/vel.png" width="50px"
+                            onclick="new_page(this)" />
+                        <button class="btn btn-primary mt-3" onclick="location.href='index.html'" 
+                        style="height: 50px; background-color: #4682B4; border-color: #4682B4;">뒤로갈래?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main2">
+        <div id="title_box" style="text-align: center;">
+            상추🐕🐕
+        </div>
+        <div id="image_section2">
+            <div id="main_dog">
+                <img src="img/강1.jpg" width="300px" />
+            </div>
+            <div id="sub_dog">
+                <span>
+                    <img src="img/강2.jpg" height="50px" width="50px" />
+                </span>
+                <span>
+                    <img src="img/강3.jpg" height="50px" width="50px" />
+                </span>
+                <span>
+                    <img src="img/강4.jpg" height="50px" width="50px" />
+                </span>
+            </div>
+            </span>
+        </div>
+    </div>
+
+</body>
+
+</html>
