@@ -2,14 +2,13 @@ button {
   background-color: #4caf50;
   border: none;
   color: white;
-  padding: none;
   font-size: 0.75rem;
   border-radius: 0.5rem;
   cursor: pointer;
   width: 130px;
   height: 50px;
   position: absolute;
-  right: 30px;
+  right: 0px;
 }
 
 body {
@@ -19,12 +18,35 @@ body {
 button:hover {
   background-color: #3e8e41;
 }
-/* 
-  #button-container {
-    position: relative;
-    width: 700px;
-    height: 50px;
-  } */
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
+#basic-info {
+  height: 300px;
+  background: #111;
+}
+#mbti {
+  height: 300px;
+  background: #222;
+}
+#learning-style {
+  height: 300px;
+  background: #333;
+}
+#tmi {
+  height: 300px;
+  background: #444;
+}
+#resolution {
+  height: 300px;
+  background: #555;
+}
 
 #home-button {
   position: fixed;
@@ -33,10 +55,22 @@ button:hover {
   height: 60px;
 }
 
-#button-container {
-  position: absolute;
+.container {
   margin: 0 auto;
   width: 70%;
-  display: flex;
-  justify-content: flex-end;
+  height: inherit;
+  background: #fff;
+}
+
+#button-container {
+  position: relative;
+}
+
+.w-30 {
+  width: 30%;
+  background-color: pink;
+}
+
+.w-70 {
+  width: 70%;
 }
