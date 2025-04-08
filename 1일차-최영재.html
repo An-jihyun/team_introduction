@@ -10,29 +10,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Song+Myung&display=swap');
 
         body {
             background-image: url('img/bgi.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            background-attachment: fixed;
 
             display: flex;
             flex-direction: column;
 
-            font-family: "Song Myung", serif;
-            font-weight: 400;
+            font-family: "Noto Sans KR", sans-serif;
+            font-weight: weight;
             font-style: normal;
             font-size: 25px;
+
             background-color: #4682B4;
             color: #4682B4;
-            height: 100vh;
             justify-content: center;
             align-items: center;
         }
 
         #main {
+            margin-top: 200px;
             box-shadow: 0px 4px 15px black;
             border: 10px solid #4682B4;
             justify-content: center;
@@ -42,9 +44,20 @@
             background-color: #D6F6FF;
         }
 
-
         #main2 {
             margin-top: 30px;
+            box-shadow: 0px 4px 15px black;
+            border: 10px solid #4682B4;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-radius: 15px;
+            padding: 25px;
+            background-color: #D6F6FF;
+        }
+
+        #main3 {
+            margin-top: 30px;
+            margin-bottom: 200px;
             box-shadow: 0px 4px 15px black;
             border: 10px solid #4682B4;
             justify-content: center;
@@ -68,6 +81,16 @@
             background-color: #4682B4;
             width: 100%;
         }
+        
+        #dog_int {
+            color: #D6F6FF;
+            text-align: left;
+            margin-top: 10px;
+            border-radius: 10px;
+            padding: 10px 5px 5px 15px;
+            background-color: #4682B4;
+            width: 100%;
+        }
 
         #introduce_box2 {
             margin-top: 10px;
@@ -87,7 +110,7 @@
             margin-left: 20px;
         }
 
-        #text_line>ol>li:hover {
+        #text_line>ul>li:hover {
             font-weight: bold;
         }
 
@@ -105,7 +128,7 @@
 
         img {
             box-shadow: 0px 4px 8px black;
-            border-radius: 10%;
+            border-radius: 5%;
         }
 
         img:hover {
@@ -139,13 +162,21 @@
             window.open(elem.dataset.url);
         }
 
-        function change_img (elem) {
-            let mainImg = $('#main_dog_img');
-            let subImg = $(this);
+        function change_dog_img (elem) {
+            let main_img = $('#main_dog_img');
+            let sub_img = $(elem);
 
-            let temp = mainImg.attr('src');  // 메인이미지 src 저장
-            mainImg.attr('src', subImg.attr('src'));  // 메인 -> 서브 src
-            subImg.attr('src', temp);  // 서브 -> 메인 src
+            let change = main_img.attr('src');
+            main_img.attr('src', sub_img.attr('src'));
+        };
+
+        
+        function change_m_img (elem) {
+            let main_img = $('#main_m_img');
+            let sub_img = $(elem);
+
+            let change = main_img.attr('src');
+            main_img.attr('src', sub_img.attr('src'));
         };
         
     </script>
@@ -160,20 +191,37 @@
         <div id="main_section">
             <div id="image_section">
                 <div id="main_pic">
-                    <img src="img/blue.png" width="300px" />
+                    <img id="main_m_img" src="img/blue.png" width="500px" />
                 </div>
                 <div id="sub_pic">
                     <span>
-                        <img src="img/blue.png" width="50px" />
+                        <img onclick="change_m_img(this)" src="img/blue.png" width="90px;" height="90px"/>
                     </span>
                     <span>
-                        <img src="img/blue.png" width="50px" />
+                        <img onclick="change_m_img(this)" src="img/프로필1.png" width="90px" height="90px"/>
                     </span>
                     <span>
-                        <img src="img/blue.png" width="50px" />
+                        <img onclick="change_m_img(this)" src="img/프로필2.png" width="90px" height="90px"/>
                     </span>
                     <span>
-                        <img src="img/blue.png" width="50px" />
+                        <img onclick="change_m_img(this)" src="img/초딩.png" width="90px" height="90px"/>
+                    </span>
+                </div>
+                <div id="sub_pic">
+                    <span>
+                        <img onclick="change_m_img(this)" src="img/만화.jpg" width="90px;" height="90px"/>
+                    </span>
+                    <span>
+                        <img onclick="change_m_img(this)" src="img/카롤라.jpg" width="90px" height="90px"/>
+                    </span>
+                    <span>
+                        <img onclick="change_m_img(this)" src="img/좋은데이.jpg" width="90px" height="90px"/>
+                    </span>
+                    <span>
+                        <img onclick="change_m_img(this)" src="img/이영자.jpg" width="90px" height="90px"/>
+                    </span>
+                    <span>
+                        <img onclick="change_m_img(this)" src="img/커피.jpg" width="90px" height="90px"/>
                     </span>
                 </div>
                 </span>
@@ -184,13 +232,28 @@
                     최영재 <u>만</u> 29세
                 </div>
                 <div id="introduce_box2">
-                    <ol style="font-size: 20px;">
+                    <ul style="font-size: 20px; display: flex; flex-direction: column; gap: 10px;">
                         <li>불4조에서 <strong>파랑불사조</strong> 역할을 맡았습니다.</li>
-                        <li>객관적으로 살펴본 자신의 장점</li>
-                        <li>자신의 스타일 협업 스타일 소개</li>
-                        <li>우리 팀만의 특징과 추구하는 궁극적인 목표</li>
-                        <li>민폐 끼치지 않도록 열심히 하겠습니다.</li>
-                    </ol>
+                        <li>저는 이것저것 발담구는걸 못참는 사람입니다. 결말은 좋지못했음😅
+                            <br/>개발자로는 꼭 성공하고 싶습니다.🧑‍💻
+                            <ul>
+                                <li>만화과 > 졸작 미제출 > 졸업못함</li>
+                                <li>커피 > 카페바리스타 자격증만 따고 끝</li>
+                                <li>드론 > 조종자 자격증만 따고 끝</li>
+                                <li>노래 > 최고 커리어 학과 장기자랑 1등이 끝</li>
+                            </ul>
+                        <li>자신의 협업 스타일
+                            <ul>
+                                <li>소통은 즉각적으로</li>
+                                <li>공격적인 말투 X</li>
+                                <li>빠른 피드백 반영</li>
+                            </ul>
+                        </li>
+                        <li>좋아하는것?<br/>🍺 술자리, 🎶음악감상 & 노래방, 🕹️ 게임(이터널리턴👍)</li>
+                        <li>한마디<br/>많은 시행착오를 거치고 .
+                            <br/>목표점에 꼭 도달하겠으며 저와 팀으로 만날 분들에게
+                            <br/>누가 되지 않도록 열심히 하겠습니다.</li>
+                    </ul>
 
                     <div id="sub_int">
                         <img data-url="https://github.com/teopteop?tab=repositories" src="img/git.png" width="50px"
@@ -207,27 +270,51 @@
 
     <div id="main2">
         <div id="title_box" style="text-align: center;">
-            상추🐕🐕
+            반려견🐕🐕
         </div>
         <div id="image_section2">
             <div id="main_dog">
-                <img id="main_dog_img" src="img/강1.jpg" width="300px" />
+                <img id="main_dog_img" src="img/강1.jpg" width="500px" />
             </div>
             <div id="sub_dog">
                 <span>
-                    <img onclick="changeImg(this)" src="img/강2.jpg" height="50px" width="50px" />
+                    <img onclick="change_dog_img(this)" src="img/강1.jpg" height="90px" width="90px" />
                 </span>
                 <span>
-                    <img onclick="changeImg(this)" src="img/강3.jpg" height="50px" width="50px" />
+                    <img onclick="change_dog_img(this)" src="img/강2.jpg" height="90px" width="90px" />
                 </span>
                 <span>
-                    <img onclick="changeImg(this)" src="img/강4.jpg" height="50px" width="50px" />
+                    <img onclick="change_dog_img(this)" src="img/강3.jpg" height="90px" width="90px" />
+                </span>
+                <span>
+                    <img onclick="change_dog_img(this)" src="img/강4.jpg" height="90px" width="90px" />
+                </span>
+                <span>
+                    <img onclick="change_dog_img(this)" src="img/강5.jpg" height="90px" width="90px" />
                 </span>
             </div>
             </span>
         </div>
+        
+        <div id="dog_int" style="text-align: left;">
+            <ul style="font-size: 20px; display: flex; flex-direction: column; gap: 10px;">
+                <li>이름 : 상추</li>
+                <li>나이 : 11세</li>
+                <li>성별 : 남</li>
+                <li>품종 : 시고르자브종</li>
+            </ul>
+        </div>
     </div>
 
+    <div id="main3">
+        <div id="title_box">
+            TMI 10년전 작업물📼
+        </div>
+        <div>
+            <video style="margin-top: 10px;
+                border-radius: 10px; width: 800px;" src="img/영상.mp4" controls loop muted></video>
+        </div>
+    </div>
 </body>
 
 </html>
