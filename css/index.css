@@ -43,6 +43,8 @@ body {
   padding: 60px 20px;
   max-width: 800px;
   margin: 0 auto;
+  margin-top: 100px;
+  animation: slideBounce 1s ease-out;
 }
 
 .team-intro h2 {
@@ -57,10 +59,27 @@ body {
   margin-bottom: 20px;
 }
 
+@keyframes slideBounce {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /**/
 
 .card-wrapper {
   max-width: 1500px;
-  margin: 600px auto;
+  margin: 60px auto;
   margin-bottom: 50px;
 }
