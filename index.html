@@ -12,6 +12,30 @@
     />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/index.css" />
+
+    <script>
+      function page_move(elem) {
+        let mamberName = '';
+
+        if(elem.id == 'phw'){
+          memberName = 'Hyeonwoo';
+        } else if(elem.id == 'khc'){
+          memberName = 'HyunChan';
+        } else if(elem.id == 'ajh'){
+          memberName = 'jihyun';
+        } else if(elem.id == 'lak'){
+          memberName = 'leeanKeun';
+        } else if(elem.id == 'hjh'){
+          memberName = 'Jaehyeon';
+        }
+        else if(elem.id == 'cyj'){
+          memberName = 'YeongJae';
+        };
+        
+        location.href = memberName +'.html';
+      }
+    </script>
+    
   </head>
   <body>
     <header class="navbar">
@@ -40,6 +64,7 @@
 
     <div class="card-wrapper container">
       <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div onclick="page_move(this)" class="col" id="phw">
         <div class="col">
           <div class="card h-100">
             <img src="./images/fbprfile.png" class="card-img-top" alt="..." />
@@ -52,6 +77,7 @@
             </div>
           </div>
         </div>
+        <div onclick="page_move(this)" class="col" id="khc">
         <div class="col">
           <div class="card h-100">
             <img src="./images/fbprfile.png" class="card-img-top" alt="..." />
@@ -61,6 +87,7 @@
             </div>
           </div>
         </div>
+        <div onclick="page_move(this)" class="col" id="ajh">
         <div class="col">
           <div class="card h-100">
             <img src="./images/fbprfile.png" class="card-img-top" alt="..." />
@@ -73,6 +100,7 @@
             </div>
           </div>
         </div>
+        <div onclick="page_move(this)" class="col" id="lak">
         <div class="col">
           <div class="card h-100">
             <img src="./images/fbprfile.png" class="card-img-top" alt="..." />
@@ -85,6 +113,7 @@
             </div>
           </div>
         </div>
+        <div onclick="page_move(this)" class="col" id="hjh">
         <div class="col">
           <div class="card h-100">
             <img src="./images/fbprfile.png" class="card-img-top" alt="..." />
@@ -97,6 +126,7 @@
             </div>
           </div>
         </div>
+        <div onclick="page_move(this)" class="col" id="cyj">
         <div class="col">
           <div class="card h-100">
             <img src="./images/fbprfile.png" class="card-img-top" alt="..." />
