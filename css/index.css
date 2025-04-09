@@ -83,3 +83,7 @@ body {
   margin: 60px auto;
   margin-bottom: 50px;
 }
+
+.card-wrapper .col {
+  cursor: pointer;
+}
