@@ -83,3 +83,43 @@ body {
   margin: 60px auto;
   margin-bottom: 50px;
 }
+
+.card-wrapper .col {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover 시 카드 확대 + 빛나는 그림자 */
+.card-wrapper .col:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* 반짝이는 빛 효과는 hover된 카드에서만 생성됨 */
+.card-wrapper .col:hover::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg) translateX(-100%);
+  animation: shine 0.8s ease forwards;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 빛이 스르르 지나가는 애니메이션 */
+@keyframes shine {
+  to {
+    transform: rotate(25deg) translateX(100%);
+  }
+}
