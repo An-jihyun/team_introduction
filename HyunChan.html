@@ -48,7 +48,7 @@
         }
 
 
-        .head_icon {
+        .head-icon {
             font-size: 30px;
             display: flex;
             align-items: center;
@@ -66,7 +66,7 @@
         }
 
 
-        .head_icon p {
+        .head-icon p {
             font-size: 40px;
             margin: 0;
         }
@@ -79,7 +79,7 @@
         }
 
 
-        .jum {
+        .intro-area {
             width: 1600px;
             margin: 0 auto;
             box-sizing: border-box;
@@ -99,7 +99,7 @@
         }
 
 
-        .jum img {
+        .intro-area img {
             width: 300px;
             height: 250px;
             object-fit: cover;
@@ -107,7 +107,7 @@
         }
 
 
-        .i_am_ground {
+        .i-am-ground {
             flex-grow: 1;
             position: relative;
             min-height: 280px;
@@ -142,7 +142,7 @@
         }
 
 
-        .jum2 {
+        .tmi-area {
             width: 1600px;
             height: 1000px;
             margin: 0 auto;
@@ -177,11 +177,9 @@
                 0 0 40px rgba(255, 200, 0, 0.2);
         }
 
-
-        .i_am_grounds {
+        .i-am-ground2 {
             display: none;
         }
-
 
         .tmi-btn {
             display: flex;
@@ -214,7 +212,7 @@
 <body>
     <button class="btn btn-warning back-btn" onclick="location.href='index.html'">뒤로가기</button>
     <div class="head">
-        <div class="head_icon">
+        <div class="head-icon">
             <div class="navbar-brand" href="#">
                 <img src="https://i.imgur.com/3INxSJw.png" alt="Logo" width="90" height="90" class="icon">
             </div>
@@ -228,9 +226,9 @@
     </div>
 
     <div class="mb-4 bg-body-tertiary rounded-3" style="padding: 0;">
-        <div class="jum">
+        <div class="intro-area">
             <img style src="HyunChan_Images/HyunChan_profile1.jpg" alt="김현찬_사진">
-            <div class="i_am_ground">
+            <div class="i-am-ground">
                 <div class="text-box">
 
                     <div class="item">
@@ -258,14 +256,14 @@
                     </div>
 
                 </div>
-                <button class="btn btn-warning toggle-btn">자세히보기</button>
+                <button class="btn btn-warning toggle-btn">자세히 보기</button>
             </div>
         </div>
 
 
-        <div class="jum2">
+        <div class="tmi-area">
             <div>
-                <div class="i_am_grounds">
+                <div class="i-am-ground2">
                     <div class="tmi-box">
                         <img style="margin-top: 5px;" src="HyunChan_Images/HyunChan_profile2.jpg" alt="image"
                             width="550" height="400" alt="김현찬_사진">
@@ -289,7 +287,7 @@
             const $btn = $(this);
             const currentText = $btn.text();
 
-            $btn.text(currentText.includes("보기") ? "자세히 보기 접기" : "자세히 보기");
+            $btn.text(currentText.includes("접기") ? "자세히 보기" : "자세히 보기 접기");
         });
 
 
@@ -317,12 +315,13 @@
 
 
         $(".toggle-btn2").click(function () {
-            $(".i_am_grounds").slideToggle();
+            $(".i-am-ground2").slideToggle();
+            setTimeout(function() {
+                $('.toggle-btn2').text("별 거 없죠?");
+            }, 2000);
         });
 
     </script>
 </body>
 
 </html>
-
-<!-- Ex -->21312
